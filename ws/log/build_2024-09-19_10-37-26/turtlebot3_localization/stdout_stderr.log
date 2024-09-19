@@ -1,0 +1,20 @@
+-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found nav2_common: 1.1.16 (/opt/ros/humble/share/nav2_common/cmake)
+-- Found navigation2: 1.1.16 (/opt/ros/humble/share/navigation2/cmake)
+-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ros-learner/mnt/ws/build/turtlebot3_localization
+-- Install configuration: ""
+-- Installing: /home/ros-learner/mnt/ws/install/turtlebot3_localization/share/turtlebot3_localization/launch
+-- Installing: /home/ros-learner/mnt/ws/install/turtlebot3_localization/share/turtlebot3_localization/launch/nav2_amcl.launch.py
+[31mCMake Error at cmake_install.cmake:50 (file):
+  file INSTALL cannot find
+  "/home/ros-learner/mnt/ws/src/turtlebot3_localization/maps": No such file
+  or directory.
+
+[0m

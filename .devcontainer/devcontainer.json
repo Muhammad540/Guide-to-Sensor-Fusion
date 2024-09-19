@@ -1,0 +1,43 @@
+{
+    "name": "ros-learning dev container",
+    "privileged": true,
+    "build": {
+        "dockerfile": "full.Dockerfile",
+        "context": "../.."
+    },
+    "workspaceFolder": "/home/ros-learner/mnt/ws",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/home/ros-learner/mnt,type=bind,consistency=cached",
+    "containerEnv": {
+        "DISPLAY": "${env:DISPLAY}",
+        "NVIDIA_VISIBLE_DEVICES": "all",
+        "NVIDIA_DRIVER_CAPABILITIES": "all",
+        "ROS_DOMAIN_ID": 30
+    },
+    "runArgs": [
+        "--net=host",
+        "--gpus",
+        "all"
+    ],
+    "mounts": [
+       "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind,consistency=cached",
+       "source=/dev,target=/dev,type=bind,consistency=cached" //TODO: this is sort of terrible but other options are too complicated for recognizing detached/reattached devices
+    ],
+
+    "postCreateCommand": "../util/pc_container_scripts/ros_learner_build_install.sh;sudo chown -R $(whoami) /home/ros-learner ;echo 'source /home/ros-learner/mnt/ws/install/setup.bash;export PATH=$PATH:/home/ros-learner/mnt/util/pc_container_scripts/' >> /home/ros-learner/.bashrc",
+
+    "otherPortsAttributes": {
+        "onAutoForward": "ignore"
+    },
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cpptools-extension-pack",
+                "donjayamanne.python-extension-pack",
+                "ms-iot.vscode-ros"
+            ]
+        }
+    }
+
+}

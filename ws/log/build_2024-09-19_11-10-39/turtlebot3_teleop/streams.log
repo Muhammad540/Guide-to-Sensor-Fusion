@@ -1,0 +1,21 @@
+[0.658s] Invoking command in '/home/ros-learner/mnt/ws/src/turtlebot3/turtlebot3_teleop': PYTHONPATH=/home/ros-learner/mnt/ws/build/turtlebot3_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ros-learner/mnt/ws/install/turtlebot3_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/turtlebot3_teleop build --build-base /home/ros-learner/mnt/ws/build/turtlebot3_teleop/build install --record /home/ros-learner/mnt/ws/build/turtlebot3_teleop/install.log --single-version-externally-managed install_data
+[0.838s] running egg_info
+[0.838s] writing ../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/PKG-INFO
+[0.838s] writing dependency_links to ../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/dependency_links.txt
+[0.838s] writing entry points to ../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/entry_points.txt
+[0.838s] writing requirements to ../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/requires.txt
+[0.839s] writing top-level names to ../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/top_level.txt
+[0.840s] reading manifest file '../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/SOURCES.txt'
+[0.840s] writing manifest file '../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/SOURCES.txt'
+[0.840s] running build
+[0.840s] running build_py
+[0.841s] running install
+[0.841s] running install_lib
+[0.842s] running install_data
+[0.842s] running install_egg_info
+[0.843s] removing '/home/ros-learner/mnt/ws/install/turtlebot3_teleop/lib/python3.10/site-packages/turtlebot3_teleop-2.1.5-py3.10.egg-info' (and everything under it)
+[0.843s] Copying ../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info to /home/ros-learner/mnt/ws/install/turtlebot3_teleop/lib/python3.10/site-packages/turtlebot3_teleop-2.1.5-py3.10.egg-info
+[0.844s] running install_scripts
+[0.859s] Installing teleop_keyboard script to /home/ros-learner/mnt/ws/install/turtlebot3_teleop/lib/turtlebot3_teleop
+[0.859s] writing list of installed files to '/home/ros-learner/mnt/ws/build/turtlebot3_teleop/install.log'
+[0.909s] Invoked command in '/home/ros-learner/mnt/ws/src/turtlebot3/turtlebot3_teleop' returned '0': PYTHONPATH=/home/ros-learner/mnt/ws/build/turtlebot3_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ros-learner/mnt/ws/install/turtlebot3_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/turtlebot3_teleop build --build-base /home/ros-learner/mnt/ws/build/turtlebot3_teleop/build install --record /home/ros-learner/mnt/ws/build/turtlebot3_teleop/install.log --single-version-externally-managed install_data

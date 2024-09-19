@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/tbt-otonom/realsense_ws/install/realsense2_camera/include/**",
+        "/home/tbt-otonom/realsense_ws/install/realsense2_camera_msgs/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/tbt-otonom/mnt/ws/src/tbt_otonom_gui/include/**",
+        "/home/tbt-otonom/mnt/ws/src/tbt_otonom_nav2/tbt_otonom_obstacle_layer/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

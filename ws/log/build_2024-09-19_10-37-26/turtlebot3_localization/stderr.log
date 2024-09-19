@@ -1,0 +1,6 @@
+[31mCMake Error at cmake_install.cmake:50 (file):
+  file INSTALL cannot find
+  "/home/ros-learner/mnt/ws/src/turtlebot3_localization/maps": No such file
+  or directory.
+
+[0m

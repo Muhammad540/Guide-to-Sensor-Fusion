@@ -1,0 +1,48 @@
+[0.030s] Invoking command in '/home/ros-learner/mnt/ws/build/turtlebot3_navigation2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ros-learner/mnt/ws/src/turtlebot3/turtlebot3_navigation2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ros-learner/mnt/ws/install/turtlebot3_navigation2
+[0.092s] -- The C compiler identification is GNU 11.4.0
+[0.150s] -- The CXX compiler identification is GNU 11.4.0
+[0.156s] -- Detecting C compiler ABI info
+[0.231s] -- Detecting C compiler ABI info - done
+[0.241s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.241s] -- Detecting C compile features
+[0.241s] -- Detecting C compile features - done
+[0.245s] -- Detecting CXX compiler ABI info
+[0.371s] -- Detecting CXX compiler ABI info - done
+[0.377s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.377s] -- Detecting CXX compile features
+[0.378s] -- Detecting CXX compile features - done
+[0.382s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.604s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.688s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.813s] -- Configuring done
+[0.817s] -- Generating done
+[0.818s] -- Build files have been written to: /home/ros-learner/mnt/ws/build/turtlebot3_navigation2
+[0.824s] Invoked command in '/home/ros-learner/mnt/ws/build/turtlebot3_navigation2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ros-learner/mnt/ws/src/turtlebot3/turtlebot3_navigation2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ros-learner/mnt/ws/install/turtlebot3_navigation2
+[0.828s] Invoking command in '/home/ros-learner/mnt/ws/build/turtlebot3_navigation2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ros-learner/mnt/ws/build/turtlebot3_navigation2 -- -j16 -l16
+[0.912s] Invoked command in '/home/ros-learner/mnt/ws/build/turtlebot3_navigation2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ros-learner/mnt/ws/build/turtlebot3_navigation2 -- -j16 -l16
+[0.985s] Invoking command in '/home/ros-learner/mnt/ws/build/turtlebot3_navigation2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ros-learner/mnt/ws/build/turtlebot3_navigation2
+[0.995s] -- Install configuration: ""
+[0.995s] -- Execute custom install script
+[0.996s] -- Symlinking: /home/ros-learner/mnt/ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/launch/navigation2.launch.py
+[1.009s] -- Symlinking: /home/ros-learner/mnt/ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/map/map.pgm
+[1.026s] -- Symlinking: /home/ros-learner/mnt/ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/map/map.yaml
+[1.042s] -- Symlinking: /home/ros-learner/mnt/ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/param/burger.yaml
+[1.062s] -- Symlinking: /home/ros-learner/mnt/ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/param/waffle.yaml
+[1.080s] -- Symlinking: /home/ros-learner/mnt/ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/param/waffle_pi.yaml
+[1.096s] -- Symlinking: /home/ros-learner/mnt/ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/rviz/tb3_navigation2.rviz
+[1.117s] -- Symlinking: /home/ros-learner/mnt/ws/install/turtlebot3_navigation2/share/ament_index/resource_index/package_run_dependencies/turtlebot3_navigation2
+[1.135s] -- Symlinking: /home/ros-learner/mnt/ws/install/turtlebot3_navigation2/share/ament_index/resource_index/parent_prefix_path/turtlebot3_navigation2
+[1.153s] -- Symlinking: /home/ros-learner/mnt/ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/environment/ament_prefix_path.sh
+[1.167s] -- Symlinking: /home/ros-learner/mnt/ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/environment/ament_prefix_path.dsv
+[1.182s] -- Symlinking: /home/ros-learner/mnt/ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/environment/path.sh
+[1.206s] -- Symlinking: /home/ros-learner/mnt/ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/environment/path.dsv
+[1.223s] -- Symlinking: /home/ros-learner/mnt/ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/local_setup.bash
+[1.250s] -- Symlinking: /home/ros-learner/mnt/ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/local_setup.sh
+[1.267s] -- Symlinking: /home/ros-learner/mnt/ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/local_setup.zsh
+[1.287s] -- Symlinking: /home/ros-learner/mnt/ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/local_setup.dsv
+[1.303s] -- Symlinking: /home/ros-learner/mnt/ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/package.dsv
+[1.319s] -- Symlinking: /home/ros-learner/mnt/ws/install/turtlebot3_navigation2/share/ament_index/resource_index/packages/turtlebot3_navigation2
+[1.333s] -- Symlinking: /home/ros-learner/mnt/ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/cmake/turtlebot3_navigation2Config.cmake
+[1.346s] -- Symlinking: /home/ros-learner/mnt/ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/cmake/turtlebot3_navigation2Config-version.cmake
+[1.358s] -- Symlinking: /home/ros-learner/mnt/ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/package.xml
+[1.386s] Invoked command in '/home/ros-learner/mnt/ws/build/turtlebot3_navigation2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ros-learner/mnt/ws/build/turtlebot3_navigation2

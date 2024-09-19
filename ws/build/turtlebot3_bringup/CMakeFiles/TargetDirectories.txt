@@ -1,9 +1,0 @@
-/home/ros-learner/mnt/ws/build/turtlebot3_bringup/CMakeFiles/uninstall.dir
-/home/ros-learner/mnt/ws/build/turtlebot3_bringup/CMakeFiles/turtlebot3_bringup_uninstall.dir
-/home/ros-learner/mnt/ws/build/turtlebot3_bringup/CMakeFiles/test.dir
-/home/ros-learner/mnt/ws/build/turtlebot3_bringup/CMakeFiles/edit_cache.dir
-/home/ros-learner/mnt/ws/build/turtlebot3_bringup/CMakeFiles/rebuild_cache.dir
-/home/ros-learner/mnt/ws/build/turtlebot3_bringup/CMakeFiles/list_install_components.dir
-/home/ros-learner/mnt/ws/build/turtlebot3_bringup/CMakeFiles/install.dir
-/home/ros-learner/mnt/ws/build/turtlebot3_bringup/CMakeFiles/install/local.dir
-/home/ros-learner/mnt/ws/build/turtlebot3_bringup/CMakeFiles/install/strip.dir

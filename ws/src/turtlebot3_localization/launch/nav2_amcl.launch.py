@@ -4,6 +4,7 @@ from launch import LaunchDescription
 from launch_ros.actions import Node
 from launch.substitutions import LaunchConfiguration
 from launch.actions import DeclareLaunchArgument
+from launch.actions import TimerAction
 
 def generate_launch_description():
     package_name = 'turtlebot3_localization'
@@ -34,7 +35,7 @@ def generate_launch_description():
         package_name), "maps", "map.yaml")
     
     rviz_file = os.path.join(get_package_share_directory(
-        "map_server"), "params", "rviz_localization_config.rviz")
+        package_name), "params", "rviz_localization_config.rviz")
     
     ld = LaunchDescription()
     ld.add_action(declare_use_sim_time_cmd)
@@ -50,35 +51,61 @@ def generate_launch_description():
         parameters=[{'use_sim_time': True}],
         emulate_tty=True),)
     
-    ld.add_action(Node(package="nav2_map_server",
-        executable="map_server",
-        name="map_server",
-        output="screen",
-        parameters=[{"use_sim_time": True},
-                    {"yaml_filename": map_file}],
-        emulate_tty=True),)
-    
-    ld.add_action(Node(
-        package='nav2_amcl',
-        executable='amcl',
-        name='amcl',
-        output='screen',
-        parameters=[params_file],
-        respawn=use_respawn,
-        arguments=['--ros-args', '--log-level', log_level],
-        respawn_delay=2.0,
-        remappings=[('/tf', 'tf'),
-                    ('/tf_static', 'tf_static')]
+    ld.add_action(TimerAction(
+        period=5.0, # we add a delay of 5 seconds between rviz and the rest of the nodes so that map_server can load the map before amcl starts
+        actions=[
+            Node(package="nav2_map_server",
+                executable="map_server",
+                name="map_server",
+                output="screen",
+                parameters=[{"use_sim_time": True},
+                            {"yaml_filename": map_file}],
+                emulate_tty=True),
+            Node(
+                package='nav2_amcl',
+                executable='amcl',
+                name='amcl',
+                output='screen',
+                parameters=[params_file],
+                respawn=use_respawn,
+                arguments=['--ros-args', '--log-level', log_level],
+                respawn_delay=2.0,
+                remappings=[('/tf', 'tf'),
+                            ('/tf_static', 'tf_static')]
+            ),
+            Node(
+                package="nav2_lifecycle_manager",
+                executable="lifecycle_manager",
+                name="lifecycle_manager_mapper",
+                output="screen",
+                parameters=[{"use_sim_time": True},
+                            {"autostart": True},
+                            {"node_names": ["map_server","amcl"]}],
+                emulate_tty=True)
+        ]
     ))
     
-    ld.add_action(Node(
-        package="nav2_lifecycle_manager",
-        executable="lifecycle_manager",
-        name="lifecycle_manager_mapper",
-        output="screen",
-        parameters=[{"use_sim_time": True},
-                    {"autostart": True},
-                    {"node_names": ["map_server","amcl"]}],
-        emulate_tty=True))
+    # ld.add_action(Node(
+    #     package='nav2_amcl',
+    #     executable='amcl',
+    #     name='amcl',
+    #     output='screen',
+    #     parameters=[params_file],
+    #     respawn=use_respawn,
+    #     arguments=['--ros-args', '--log-level', log_level],
+    #     respawn_delay=2.0,
+    #     remappings=[('/tf', 'tf'),
+    #                 ('/tf_static', 'tf_static')]
+    # ))
+    
+    # ld.add_action(Node(
+    #     package="nav2_lifecycle_manager",
+    #     executable="lifecycle_manager",
+    #     name="lifecycle_manager_mapper",
+    #     output="screen",
+    #     parameters=[{"use_sim_time": True},
+    #                 {"autostart": True},
+    #                 {"node_names": ["map_server","amcl"]}],
+    #     emulate_tty=True))
 
     return ld

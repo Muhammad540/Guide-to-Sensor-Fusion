@@ -30,7 +30,7 @@ ros2 launch turtlebot3_localization nav2_amcl.launch.py
 This will launch the AMCL node along with the map server and RViz.
 
 ## 🎬 Cool Demos for AMCL
-### Cartographer Mapping Video:
+
 ### Cartographer Mapping Video:
 [Watch the Cartographer Mapping ](https://drive.google.com/file/d/1isxhJCdbXPcoUlg7lP8My6Yyl4TPG2s3/view?usp=sharing)
 

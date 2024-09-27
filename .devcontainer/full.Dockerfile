@@ -3,7 +3,6 @@ FROM ubuntu:22.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-# Builder dependencies installation
 RUN apt-get update \
     && apt-get install -qq -y --no-install-recommends \
     build-essential \
@@ -34,7 +33,6 @@ ARG DEBIAN_FRONTEND=noninteractive
 SHELL ["/bin/bash", "-c"]
 ENV SHELL=/bin/bash
 
-#dependencies for TRHex, RoboMETU, RHexAPI and Gazebo
 RUN apt update; apt install build-essential \
                 sudo \
                 autoconf \
@@ -57,13 +55,11 @@ RUN apt update; apt install build-essential \
                 ros-humble-navigation2 \ 
                 ros-humble-nav2-bringup -y
 
-#add user
 RUN groupadd --gid $USER_GID $USERNAME \
     && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME \
     && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
 
-#add user to plugdev group for librealsense
 RUN usermod -a -G plugdev $USERNAME
 
 USER $USERNAME
